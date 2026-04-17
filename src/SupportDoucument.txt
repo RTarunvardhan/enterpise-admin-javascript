@@ -1,0 +1,124 @@
+SearchInputFields = [
+{	NAME: COLUMNNAME, 
+	TYPE: MULTISELECT, // (Is Multi is true  - React Select)
+	VALUE: [{key1: value, desc1: value},{key2: value, desc2: value} ...]} or [{key1: value},{key2: value}......], 
+	DEFAULTVALUE: "" or key[value],
+	MIN: "" or 2 (Select minimum records),
+	MAX: "" or 5 (Select maximum records),
+	FUNCTION: handleSearchMultiSelect(),
+	CUSTOMSTYLES : {} or sx:{}
+},
+{	NAME: COLUMNNAME, 
+	TYPE: SELECT, // (Single selection - React Select)
+	VALUE: [{key1: value, desc1: value},{key2: value, desc2: value} ...]} or [{key1: value},{key2: value}......], 
+	DEFAULTVALUE: "" or key[value],
+	MIN: "" or 2 (Select minimum records),
+	MAX: "" or 5 (Select maximum records),
+	FUNCTION: handleSearchSelect(),
+	CUSTOMSTYLES : {} or sx:{}
+},
+{	NAME: COLUMNNAME, 
+	TYPE: NUMBER, (MUI textfield number) 
+	VALUE: '', 
+	DEFAULTVALUE: "" or key[value],
+	MIN: "" or 0 (Select minimum number),
+	MAX: "" or 100 (Select maximum number),
+	FUNCTION: handleSearchNumber(),
+	CUSTOMSTYLES : {} or sx:{}
+},
+{	NAME: COLUMNNAME, 
+	TYPE: FLOAT, (MUI textfield float 0.01) 
+	VALUE: '', 
+	DEFAULTVALUE: "" or key[value],
+	MIN: "" or 0 (Select minimum number),
+	MAX: "" or 100 (Select maximum number),
+	FUNCTION: handleSearchFloat(),
+	CUSTOMSTYLES : {} or sx:{}
+},
+{	NAME: COLUMNNAME, 
+	TYPE: TEXT, (MUI textfield string) 
+	VALUE: '', 
+	DEFAULTVALUE: "" or key[value],
+	MIN: "" or 0 (Select minimum characters),
+	MAX: "" or 100 (Select maximum characters),
+	FUNCTION: handleSearchText(),
+	CUSTOMSTYLES : {} or sx:{}
+},
+{	NAME: COLUMNNAME, 
+	TYPE: DATE, (MUI textfield date)
+	VALUE: '', 
+	DEFAULTVALUE: "" or key[value],
+	MIN: "" or pastDate,
+	MAX: "" or future date,
+	FUNCTION: handleSearchDate(),
+	CUSTOMSTYLES : {} or sx:{}
+},
+{	NAME: COLUMNNAME, 
+	TYPE: CHECKBOX, (MUI checkbox)
+	VALUE: [true, false], 
+	DEFAULTVALUE: "" or key[value],
+	MIN: "",
+	MAX: "" ,
+	FUNCTION: handleSearchCheckbox(),
+	CUSTOMSTYLES : {} or sx:{}
+},
+{	NAME: COLUMNNAME, 
+	TYPE: SWITCH, (MUI switch)
+	VALUE: [true, false], 
+	DEFAULTVALUE: "" or key[value],
+	MIN: "",
+	MAX: "" ,
+	FUNCTION: handleSearchSwitch(),
+	CUSTOMSTYLES : {} or sx:{}
+},
+{	NAME: COLUMNNAME, 
+	TYPE: RADIO, (MUI radio)
+	VALUE: [true, false], 
+	DEFAULTVALUE: "" or key[value],
+	MIN: "",
+	MAX: "" ,
+	FUNCTION: handleSearchRadio(),
+	CUSTOMSTYLES : {} or sx:{}
+}
+]
+
+
+const customButton = [
+        // ✅ Full object (all keys)
+        {
+            key: "save",
+            variant: "contained",
+            type: "submit",
+            sx: { backgroundColor: "green", color: "#fff", width:'100%', height:'100px' },
+            startIcon: <SaveIcon />,
+            disabled: false,
+            onClick: () => console.log("Save clicked"),
+            text: "Save"
+        },
+
+        // ✅ Partial objects
+        {
+            key: "cancel",
+            text: "Cancel",
+            variant: "outlined",
+            onClick: () => console.log("Cancel clicked")
+        },
+        {
+            key: "delete",
+            text: "Delete",
+            variant: "contained",
+            sx: { backgroundColor: "red" },
+            onClick: () => console.log("Delete clicked")
+        },
+        {
+            key: "refresh",
+            text: "Refresh",
+            startIcon: <RefreshIcon />,
+            onClick: () => console.log("Refresh clicked")
+        },
+        {
+            key: "disabledBtn",
+            text: "Disabled",
+            disabled: true
+        }
+    ];
